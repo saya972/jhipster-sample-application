@@ -1,0 +1,25 @@
+{
+  "jhipsterSampleApplicationApp": {
+    "banner": {
+      "home": {
+        "title": "Banners",
+        "createLabel": "Create a new Banner",
+        "createOrEditLabel": "Create or edit a Banner",
+        "search": "Search for Banner",
+        "notFound": "No Banners found"
+      },
+      "created": "A new Banner is created with identifier {{ param }}",
+      "updated": "A Banner is updated with identifier {{ param }}",
+      "deleted": "A Banner is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Banner {{ id }}?"
+      },
+      "detail": {
+        "title": "Banner"
+      },
+      "bannerName": "Banner Name",
+      "bannerSize": "Banner Size",
+      "bannerName": "Banner Name"
+    }
+  }
+}

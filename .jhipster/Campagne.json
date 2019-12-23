@@ -1,0 +1,42 @@
+{
+    "name": "Campagne",
+    "fields": [
+        {
+            "fieldName": "campagneName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lienCampagne",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "banners",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "banner",
+            "otherEntityRelationshipName": "bannerName",
+            "relationshipName": "banner"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "client",
+            "otherEntityRelationshipName": "campagnes",
+            "relationshipName": "campagneName",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191223055415",
+    "entityTableName": "campagne",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
