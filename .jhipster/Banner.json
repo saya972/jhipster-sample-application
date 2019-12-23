@@ -1,0 +1,32 @@
+{
+    "name": "Banner",
+    "fields": [
+        {
+            "fieldName": "bannerName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "bannerSize",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "campagne",
+            "otherEntityRelationshipName": "banner",
+            "relationshipName": "bannerName",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191223055416",
+    "entityTableName": "banner",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

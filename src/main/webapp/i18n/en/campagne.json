@@ -1,0 +1,27 @@
+{
+  "jhipsterSampleApplicationApp": {
+    "campagne": {
+      "home": {
+        "title": "Campagnes",
+        "createLabel": "Create a new Campagne",
+        "createOrEditLabel": "Create or edit a Campagne",
+        "search": "Search for Campagne",
+        "notFound": "No Campagnes found"
+      },
+      "created": "A new Campagne is created with identifier {{ param }}",
+      "updated": "A Campagne is updated with identifier {{ param }}",
+      "deleted": "A Campagne is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Campagne {{ id }}?"
+      },
+      "detail": {
+        "title": "Campagne"
+      },
+      "campagneName": "Campagne Name",
+      "lienCampagne": "Lien Campagne",
+      "banners": "Banners",
+      "banner": "Banner",
+      "campagneName": "Campagne Name"
+    }
+  }
+}

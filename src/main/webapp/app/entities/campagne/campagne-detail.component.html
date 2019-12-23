@@ -1,0 +1,41 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="campagne">
+            <h2><span jhiTranslate="jhipsterSampleApplicationApp.campagne.detail.title">Campagne</span> {{campagne.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jhipsterSampleApplicationApp.campagne.campagneName">Campagne Name</span></dt>
+                <dd>
+                    <span>{{campagne.campagneName}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationApp.campagne.lienCampagne">Lien Campagne</span></dt>
+                <dd>
+                    <span>{{campagne.lienCampagne}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationApp.campagne.banners">Banners</span></dt>
+                <dd>
+                    <span>{{campagne.banners}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationApp.campagne.campagneName">Campagne Name</span></dt>
+                <dd>
+                    <div *ngIf="campagne.campagneNameId">
+                        <a [routerLink]="['/client', campagne.campagneNameId, 'view']">{{campagne.campagneNameId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/campagne', campagne.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

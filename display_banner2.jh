@@ -1,0 +1,53 @@
+entity Campagne {
+	campagneName String
+    lienCampagne String
+    banners String
+    
+}
+
+entity Banner {
+	bannerName String
+    bannerSize String
+}
+
+// Un Client a plusieurs campagne
+relationship OneToMany {
+Client{campagnes} to Campagne{campagneName},
+// Une campagne a plusieurs bannieres
+Campagne to Banner{bannerName}
+}
+
+
+//Declaration client nom personnalise Customer
+entity Client(Customer) {
+firstName String required
+lastName String required
+email String required
+phone String
+addressLine String required
+city String
+country String
+createdDate LocalDate
+langueClient Languages
+statutClient Prenium
+}
+
+enum Languages {
+	FRENCH, ENGLISH
+}
+enum Prenium {
+	OUI, NON
+}
+
+// Set pagination options
+paginate * with infinite-scroll
+
+// Use Data Transfert Objects (DTO)
+dto * with mapstruct
+// dto * with mapstruct
+
+// Set service options to all except few
+service * with serviceImpl
+
+// Set an angular suffix
+// angularSuffix * with mySuffix

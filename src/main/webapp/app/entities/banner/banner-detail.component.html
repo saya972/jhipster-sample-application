@@ -1,0 +1,37 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="banner">
+            <h2><span jhiTranslate="jhipsterSampleApplicationApp.banner.detail.title">Banner</span> {{banner.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jhipsterSampleApplicationApp.banner.bannerName">Banner Name</span></dt>
+                <dd>
+                    <span>{{banner.bannerName}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationApp.banner.bannerSize">Banner Size</span></dt>
+                <dd>
+                    <span>{{banner.bannerSize}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationApp.banner.bannerName">Banner Name</span></dt>
+                <dd>
+                    <div *ngIf="banner.bannerNameId">
+                        <a [routerLink]="['/campagne', banner.bannerNameId, 'view']">{{banner.bannerNameId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/banner', banner.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
